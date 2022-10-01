@@ -62,14 +62,12 @@ const zooAnimals = [
     3. Return the new array
   💡 NOTE: the array returned should be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
-  function animalNames(array){
-    const displayNames = [];
-    array.foreach(function(item, index){
-      displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
+  function animalNames(zooAnimals){
+    let displayNames = [];
+    zooAnimals.forEach(animal => {
+      displayNames.push(`name: ${animal.animal_name}, scientific: ${animal.scientific_name}`)
     });
-    return displayNames;
 }
-
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
   Use lowerCaseNames to do the following:
