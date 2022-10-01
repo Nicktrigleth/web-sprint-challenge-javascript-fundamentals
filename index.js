@@ -62,14 +62,13 @@ const zooAnimals = [
     3. Return the new array
   💡 NOTE: the array returned should be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
-
   function animalNames(array){
     const displayNames = [];
-    array.foreach(function(item) {
+    array.foreach(function(item, index){
       displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
     });
     return displayNames;
-  }
+}
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -165,7 +164,7 @@ function multiply(num1, num2){
 */
 
 function greeting(first_name, last_name){
-   return `Hello, ${first_name} ${last_name}, nice to meet you!`;
+   return `Hello ${first_name} ${last_name}, nice to meet you!`;
   }
   
   
@@ -173,7 +172,7 @@ function greeting(first_name, last_name){
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
    console.log(consume(2, 2, add)); // 4
    console.log(consume(10, 16, multiply)); // 160
-  console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+   console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 
